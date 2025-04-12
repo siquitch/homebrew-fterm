@@ -5,21 +5,21 @@
 class Fterm < Formula
   desc "Fterm is a run configuration manager for flutter"
   homepage "https://github.com/siquitch/fterm/"
-  version "0.0.44"
+  version "0.45"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/siquitch/fterm/releases/download/v0.0.44/fterm_Darwin_x86_64.tar.gz"
-      sha256 "f21ffa46e35a8775013531dd98a9afbfe7a6d7d5e0657942788608ced29e1f11"
+      url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Darwin_x86_64.tar.gz"
+      sha256 "fe2d549ae8399a39b614a4ad8ffe007f88b0d1bf00429db5e098e0bb79f9a973"
 
       def install
         bin.install "fterm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/siquitch/fterm/releases/download/v0.0.44/fterm_Darwin_arm64.tar.gz"
-      sha256 "31d90da77fdce5ae0b2f91d976f9acfb4461dbf139b632dfcf3719bca700030a"
+      url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Darwin_arm64.tar.gz"
+      sha256 "192f25e59cd7c417792db4fbc826d2b1c789ecd71e0de5c271255c18e8a3442d"
 
       def install
         bin.install "fterm"
@@ -30,8 +30,8 @@ class Fterm < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/siquitch/fterm/releases/download/v0.0.44/fterm_Linux_x86_64.tar.gz"
-        sha256 "637d9cc092b09fec1d46ce7e4707b428915c46e24838ba7c925ea700a1dee903"
+        url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Linux_x86_64.tar.gz"
+        sha256 "58c1bdfed789201cb14ff06877067ce88dbf5da64e9349b285d24d5e482de8c2"
 
         def install
           bin.install "fterm"
@@ -40,8 +40,8 @@ class Fterm < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/siquitch/fterm/releases/download/v0.0.44/fterm_Linux_arm64.tar.gz"
-        sha256 "b4698d5cea21b604bb19b8e4c154a45a334e8d2a4ec61598a2645c31d2e6a96e"
+        url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Linux_arm64.tar.gz"
+        sha256 "4a05d0d57995a6606036af931b7b914d8898e5a02a2bd42f8143d5a5122b79d5"
 
         def install
           bin.install "fterm"
