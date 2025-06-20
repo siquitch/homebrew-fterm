@@ -5,21 +5,21 @@
 class Fterm < Formula
   desc "Fterm is a run configuration manager for flutter"
   homepage "https://github.com/siquitch/fterm/"
-  version "0.45"
+  version "0.46"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Darwin_x86_64.tar.gz"
-      sha256 "fe2d549ae8399a39b614a4ad8ffe007f88b0d1bf00429db5e098e0bb79f9a973"
+      url "https://github.com/siquitch/fterm/releases/download/v0.46/fterm_Darwin_x86_64.tar.gz"
+      sha256 "e79be9b7b12cf4521ad8f7cd5dbc6f0ab81cf88e5495490d9b68cbaa213b9ce5"
 
       def install
         bin.install "fterm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Darwin_arm64.tar.gz"
-      sha256 "192f25e59cd7c417792db4fbc826d2b1c789ecd71e0de5c271255c18e8a3442d"
+      url "https://github.com/siquitch/fterm/releases/download/v0.46/fterm_Darwin_arm64.tar.gz"
+      sha256 "3722f6b3414227b57ae119e34ffabd013d833b1d2cd99e10039331bff7e3a86f"
 
       def install
         bin.install "fterm"
@@ -28,24 +28,18 @@ class Fterm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Linux_x86_64.tar.gz"
-        sha256 "58c1bdfed789201cb14ff06877067ce88dbf5da64e9349b285d24d5e482de8c2"
-
-        def install
-          bin.install "fterm"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/siquitch/fterm/releases/download/v0.46/fterm_Linux_x86_64.tar.gz"
+      sha256 "a854545a9afae642d9b190f3b56ace549492000f9aa1d6a9dae7dff55661c750"
+      def install
+        bin.install "fterm"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/siquitch/fterm/releases/download/v0.45/fterm_Linux_arm64.tar.gz"
-        sha256 "4a05d0d57995a6606036af931b7b914d8898e5a02a2bd42f8143d5a5122b79d5"
-
-        def install
-          bin.install "fterm"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/siquitch/fterm/releases/download/v0.46/fterm_Linux_arm64.tar.gz"
+      sha256 "73f571b7c0a767b3da0ce22f523418ed9d7fb001a513eda041b37753959170cb"
+      def install
+        bin.install "fterm"
       end
     end
   end
